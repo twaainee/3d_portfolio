@@ -1,15 +1,15 @@
 export const myProjects = [
   {
     id: 1,
-    title: "C.O.D.E. (Concise Online Documentation for Education)",
+    title: "TranspoGAPO",
     description:
-      "C.O.D.E. (Concise Online Documentation for Education) is a clean, visually engaging user interface designed to present foundational programming concepts in HTML, CSS, and JavaScript. Built entirely with HTML, CSS, and a touch of JavaScript for interactivity, this project focuses on layout, typography, and component design to create an intuitive learning resource.",
+      "TranspoGAPO is an interactive, map-based web application designed to showcase the different Public Utility Vehicles (PUVs) operating in Olongapo City.",
     subDescription: [
-      
+      "The platform provides users with clear and accessible information regarding PUV routes, designated stops, and terminals, allowing for easier navigation and informed travel decisions within the city.",
     ],
-    href: "https://github.com/twaainee/C.O.D.E.",
+    href: "https://transpogapo.web.app",
     logo: "",
-    image: "/assets/projects/code.jpg",
+    image: "/assets/projects/transpogapo.png",
     tags: [
       {
         id: 1,
@@ -26,19 +26,31 @@ export const myProjects = [
         name: "JavaScript",
         path: "/assets/logos/javascript.svg",
       },
+
+      {
+        id: 4,
+        name: "Leaflet.js",
+        path: "/assets/logos/Leaflet_logo.svg",
+      },
+
+      {
+        id: 5,
+        name: "Firebase",
+        path: "/assets/logos/firebase.svg",
+      },
     ],
   },
   {
     id: 2,
-    title: "SushEli",
+    title: "FlowBuddy",
     description:
-      "a modern, visually appetizing user interface concept for a sushi restaurant’s online presence. Built with HTML, CSS, and JavaScript, and powered by Vite for a fast, streamlined development experience, this project showcases a fully responsive, interactive storefront that lets users explore menu items, customize their orders, and simulate a seamless checkout flow – all within a static frontend prototype.",
+      "FlowBuddy is a web-based application that uses AI-powered pose detection to assist users in performing yoga correctly.",
     subDescription: [
-      
+      "By utilizing the MediaPipe framework, the system detects body movements in real time and provides immediate feedback on posture alignment.", 
     ],
-    href: "https://github.com/twaainee/SuhshEli",
+    href: "https://flowbuddy.vercel.app",
     logo: "",
-    image: "/assets/projects/sushi.jpg",
+    image: "/assets/projects/flowbuddy.png",
     tags: [
       {
         id: 1,
@@ -57,8 +69,8 @@ export const myProjects = [
       },
       {
         id: 4,
-        name: "Vite",
-        path: "/assets/logos/vitejs.svg",
+        name: "MediaPipe",
+        path: "/assets/logos/mediapipe.svg",
       },
     ],
   },
