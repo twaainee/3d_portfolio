@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 
 
 const HeroText = () => {
-const Words = ["High-Quality", "Modern", "Scalable", "Minimalist", "Aesthetic"];
+const Words = [ "Modern", "Scalable", "Minimalist", "Aesthetic"];
 const Variants = {
     hidden:{opacity: 0, x: -50},
     visible:{opacity: 1, x: 0},
