@@ -75,11 +75,11 @@ body {
 }
 
 .headtext {
-  @apply mt-2 mb-2 text-xl;
+  @apply sm:text-2xl text-xl font-semibold sm:mt-2 sm:mb-2 mt-1 mb-1 text-white;
 }
 
 .subtext {
-  @apply text-neutral-400 text-sm md:text-base text-pretty;
+  @apply text-neutral-400 text-base md:text-lg text-pretty;
 }
 
 /* Navigation */
