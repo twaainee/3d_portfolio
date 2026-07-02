@@ -35,13 +35,13 @@ const About = () => {
             </div>
             {/* Grid 3 */}
             <div className="grid-black-color grid-3">
-                <div className="z-10 w-[50%]">
+                <div className="z-10 w-full sm:w-[50%] relative">
                     <p className="headtext">Time Zone</p>
                     <p className="subtext">I'm based in Philippines, and open to remote work worldwide</p>
-                    <figure className="absolute left-[30%] top-[10%]">
-                        <Globe />
-                    </figure>
                 </div>
+                <figure className="absolute left-[40%] md:left-[50%] top-[10%] w-full h-full">
+                    <Globe />
+                </figure>
             </div>
             {/* Grid 4 */}
             <div className="grid-special-color grid-4">
