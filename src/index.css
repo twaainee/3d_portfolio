@@ -49,6 +49,13 @@ html {
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
+
+  --animate-shimmer: shimmer 2.5s infinite;
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
 }
 body {
   background: #030412;
@@ -117,14 +124,14 @@ body {
 }
 
 .grid-default-color {
-  @apply p-6 bg-gradient-to-b from-storm to-indigo rounded-2xl;
+  @apply p-6 bg-gradient-to-br from-[#1b0b3a] via-[#110729] to-[#090317] border border-fuchsia-500/30 shadow-xl hover:border-fuchsia-400/60 hover:shadow-[0_0_30px_rgba(202,47,140,0.35)] rounded-2xl transition-all duration-300 relative overflow-hidden;
 }
 
 .grid-special-color {
-  @apply p-6 bg-gradient-to-b from-royal to-lavender rounded-2xl;
+  @apply p-6 bg-gradient-to-br from-[#1b0b3a] via-[#110729] to-[#090317] border border-fuchsia-500/30 shadow-xl hover:border-fuchsia-400/60 hover:shadow-[0_0_30px_rgba(202,47,140,0.35)] rounded-2xl transition-all duration-300 relative overflow-hidden;
 }
 .grid-black-color {
-  @apply p-6 bg-gradient-to-tl from-[#3A3A3A] via-[#242424] to-[#3A3A3A] rounded-2xl;
+  @apply p-6 bg-gradient-to-br from-[#1b0b3a] via-[#110729] to-[#090317] border border-fuchsia-500/30 shadow-xl hover:border-fuchsia-400/60 hover:shadow-[0_0_30px_rgba(202,47,140,0.35)] rounded-2xl transition-all duration-300 relative overflow-hidden;
 }
 
 /* Contact Section*/
