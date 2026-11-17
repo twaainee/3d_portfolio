@@ -23,9 +23,9 @@ const ProjectDetails = ({title, description, subDescription, image, tags, href, 
                             <img key={tag.id} src={tag.path} alt={tag.name} className='rounded-lg size-10 hover-animation'/>
                         ))}
                     </div>
-                    <a href={href} className='inline-flex shrink-0 items-center gap-2 self-end font-medium hover-animation cursor-pointer sm:self-auto'>
+                    <a href={href} target='_blank' rel='noreferrer' className='inline-flex shrink-0 items-center gap-2 self-end font-medium hover-animation cursor-pointer sm:self-auto'>
                         View Project
-                        <img src="assets/arrow-up.svg" className='size-4' />
+                        <img src="assets/arrow-up.svg" alt="" className='size-4' />
                     </a>
                 </div>
             </div>

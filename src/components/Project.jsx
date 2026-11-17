@@ -1,9 +1,18 @@
 import React from 'react'
 import ProjectDetails from './ProjectDetails'
 import { useState } from 'react'
+import TranspoGAPOCaseStudy from '../sections/TranspoGAPOCaseStudy'
+import FlowBuddyCaseStudy from '../sections/FlowBuddyCaseStudy'
 
-const Project = ({title, description, subDescription, href, image, tags, setPreview}) => {
+const caseStudySections = {
+    transpogapo: TranspoGAPOCaseStudy,
+    flowbuddy: FlowBuddyCaseStudy,
+}
+
+const Project = ({title, description, subDescription, href, caseStudy, image, tags, setPreview}) => {
     const [isHidden, setIsHidden] = useState(false)
+    const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false)
+    const CaseStudySection = caseStudySections[caseStudy]
     const showPreviewOnHover = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches
   return (
     <>
@@ -16,12 +25,34 @@ const Project = ({title, description, subDescription, href, image, tags, setPrev
                 ))}
             </div>
         </div>
-        <button onClick={()=>{ setPreview(null); setIsHidden(true) }} className="flex items-center gap-1 cursor-pointer hover-animation">
-            Read More
-            <img src="assets/arrow-right.svg" className="w-5" />
-        </button>
+        <div className="flex w-full items-center justify-end gap-6 sm:w-auto sm:flex-1">
+            {CaseStudySection && (
+                <button
+                    type="button"
+                    onClick={() => setIsCaseStudyOpen((open) => !open)}
+                    aria-expanded={isCaseStudyOpen}
+                    aria-controls={`${caseStudy}-case-study`}
+                    className="inline-flex items-center gap-2 text-neutral-400 transition-colors hover:text-white"
+                >
+                    {isCaseStudyOpen ? 'Hide Case Study' : 'Case Study'}
+                    <svg
+                        aria-hidden="true"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        className={`h-4 w-4 transition-transform ${isCaseStudyOpen ? 'rotate-180' : ''}`}
+                    >
+                        <path d="m5.5 7.5 4.5 4.5 4.5-4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </button>
+            )}
+            <button onClick={()=>{ setPreview(null); setIsHidden(true) }} className={`inline-flex items-center gap-1 cursor-pointer hover-animation ${CaseStudySection ? '' : 'ml-auto'}`}>
+                Read More
+                <img src="assets/arrow-right.svg" alt="" className="w-5" />
+            </button>
+        </div>
     </div>
     <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+    {CaseStudySection && isCaseStudyOpen && <CaseStudySection />}
     {isHidden && (<ProjectDetails title={title} description={description} subDescription={subDescription} image={image} tags={tags} href={href} closeModal={()=>setIsHidden(false)} />)}
     </>
   )

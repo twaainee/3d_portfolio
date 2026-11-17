@@ -8,6 +8,7 @@ export const myProjects = [
       "The platform provides users with clear and accessible information regarding PUV routes, designated stops, and terminals, allowing for easier navigation and informed travel decisions within the city.",
     ],
     href: "https://transpogapo.web.app",
+    caseStudy: "transpogapo",
     logo: "",
     image: "/assets/projects/transpogapo.png",
     tags: [
@@ -49,6 +50,7 @@ export const myProjects = [
       "By utilizing the MediaPipe framework, the system detects body movements in real time and provides immediate feedback on posture alignment.", 
     ],
     href: "https://flowbuddy.vercel.app",
+    caseStudy: "flowbuddy",
     logo: "",
     image: "/assets/projects/flowbuddy.png",
     tags: [
