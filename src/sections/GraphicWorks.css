@@ -1,0 +1,28 @@
+.portfolio-graphic-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 0;
+  scroll-margin-top: 6rem;
+}
+
+.portfolio-graphic-title {
+  margin: 0;
+  padding: 0 clamp(1.25rem, 4vw, 4rem);
+  text-align: center;
+}
+
+.portfolio-graphic-carousel {
+  height: clamp(560px, 80vh, 900px);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .portfolio-graphic-carousel {
+    height: clamp(450px, 70svh, 620px);
+    margin-top: 0.25rem;
+  }
+
+  .portfolio-graphic-section {
+    scroll-margin-top: 5rem;
+  }
+}

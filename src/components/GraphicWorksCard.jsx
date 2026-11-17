@@ -1,7 +1,5 @@
 import { motion } from "motion/react"
 
-const DRIVE_LINK = "https://drive.google.com/drive/folders/1GKa467bzoE4CCk5c8Xz3_b9TGo9cuURo?usp=drive_link"
-
 const GraphicWorksCard = () => {
   return (
     <div className="relative size-full overflow-hidden flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-[#1b0b3a] via-[#110729] to-[#090317] border border-fuchsia-500/30 shadow-xl group hover:border-fuchsia-400/50 transition-all duration-300">
@@ -17,16 +15,14 @@ const GraphicWorksCard = () => {
           Graphic & Visual Works
         </p>
         <p className="subtext text-xs sm:text-sm text-purple-200/70 mt-2">
-          Explore my collection of graphic designs, visual branding, digital art, and marketing assets on Google Drive.
+          Browse my poster, editorial, and visual design samples in the gallery below.
         </p>
       </div>
 
-      {/* High Impact Drive CTA Button */}
+      {/* Gallery CTA */}
       <div className="z-10 mt-6 flex justify-start">
         <motion.a
-          href={DRIVE_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#graphics"
           className="relative inline-flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-sm font-semibold text-white rounded-full bg-gradient-to-r from-fuchsia-600 via-purple-600 to-indigo-600 hover:from-fuchsia-500 hover:via-purple-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(202,47,140,0.4)] hover:shadow-[0_0_28px_rgba(202,47,140,0.65)] border border-white/20 transition-all duration-300 cursor-pointer overflow-hidden group/btn"
           whileHover={{ scale: 1.04, y: -2 }}
           whileTap={{ scale: 0.97 }}
@@ -34,11 +30,11 @@ const GraphicWorksCard = () => {
           {/* Shimmer Light Effect */}
           <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1.5s_infinite]" />
           
-          <span className="relative z-10 font-bold">Open Drive Gallery</span>
+          <span className="relative z-10 font-bold">Explore Gallery</span>
           <img
             src="assets/arrow-up.svg"
             className="relative z-10 w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 filter drop-shadow"
-            alt="External Drive Link"
+            alt="Explore design gallery"
           />
         </motion.a>
       </div>

@@ -15,6 +15,9 @@ function Navigation() {
       <li className='nav-li'>
         <a href="#work" className='nav-link'>Work</a>
       </li>
+      <li className='nav-li'>
+        <a href="#graphics" className='nav-link'>Graphics</a>
+      </li>
 
       <li className='nav-li'>
         <a href="#contact" className='nav-link'>Contact</a>
