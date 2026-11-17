@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import Card from "../components/Card"
 import { Globe } from "../components/globe"
-import GraphicWorksCard from "../components/GraphicWorksCard"
+import IntroCodeBlock from "../components/IntroCodeBlock"
 import { Frameworks } from "../components/Frameworks"
 
 const About = () => {
@@ -12,8 +12,6 @@ const About = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
             {/* Grid 1 */}
             <div className="flex items-end grid-default-color grid-1 group">
-                <div className="absolute -top-12 -right-12 w-48 h-48 bg-fuchsia-500/25 rounded-full blur-3xl group-hover:bg-fuchsia-500/40 transition-all duration-700 pointer-events-none" />
-                <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-purple-600/30 rounded-full blur-3xl group-hover:bg-indigo-500/45 transition-all duration-700 pointer-events-none" />
                 <img src="assets/coding-pov.png" className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"  />
                 <div className="z-10">
                     <p className="headtext">Hi, I'm Elijah Twaine!</p>
@@ -23,8 +21,6 @@ const About = () => {
             </div>
             {/* Grid 2 */} 
             <div className="grid-default-color grid-2 group">
-                <div className="absolute -top-12 -right-12 w-48 h-48 bg-fuchsia-500/25 rounded-full blur-3xl group-hover:bg-fuchsia-500/40 transition-all duration-700 pointer-events-none" />
-                <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-purple-600/30 rounded-full blur-3xl group-hover:bg-indigo-500/45 transition-all duration-700 pointer-events-none" />
                 <div ref={grid2Container} className="flex items-center justify-center w-full h-full">
                     <p className="flex items-end text-5xl text-gray-500">CODE IS CRAFT</p>
                     <Card style={{ rotate: "75deg", top: "30%", left: "20%" }} text="GRASP" containerRef={grid2Container}/>
@@ -38,9 +34,7 @@ const About = () => {
                 </div>
             </div>
             {/* Grid 3 */}
-            <div className="grid-black-color grid-3 group">
-                <div className="absolute -top-12 -right-12 w-48 h-48 bg-fuchsia-500/25 rounded-full blur-3xl group-hover:bg-fuchsia-500/40 transition-all duration-700 pointer-events-none" />
-                <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-purple-600/30 rounded-full blur-3xl group-hover:bg-indigo-500/45 transition-all duration-700 pointer-events-none" />
+            <div className="grid-muted-color grid-3 group">
                 <div className="z-10 w-full sm:w-[50%] relative">
                     <p className="headtext">Time Zone</p>
                     <p className="subtext">I'm based in Philippines, and open to remote work worldwide</p>
@@ -51,12 +45,10 @@ const About = () => {
             </div>
             {/* Grid 4 */}
             <div className="grid-4">
-                <GraphicWorksCard />
+                <IntroCodeBlock />
             </div>
             {/* Grid 5 */}
             <div className="grid-default-color grid-5 group">
-                <div className="absolute -top-12 -right-12 w-48 h-48 bg-fuchsia-500/25 rounded-full blur-3xl group-hover:bg-fuchsia-500/40 transition-all duration-700 pointer-events-none" />
-                <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-purple-600/30 rounded-full blur-3xl group-hover:bg-indigo-500/45 transition-all duration-700 pointer-events-none" />
                 <div className="z-10 w-[50%]">
                     <p className="headtext">Tech Stack</p>
                     <p className="subtext">I specialize in a variety of languages, frameworks and design tools that allow me to build modern, responsive and accessible web applications.</p>

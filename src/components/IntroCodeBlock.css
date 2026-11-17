@@ -1,0 +1,122 @@
+.intro-code-card {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #353535;
+  border-radius: 1rem;
+  background: #242424;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .22);
+}
+
+.intro-code-editor {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  background: #242424;
+}
+
+.intro-code-file {
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: .55rem;
+  padding: .65rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  color: #f3f3f3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(.72rem, 1vw, .9rem);
+  font-weight: 500;
+}
+
+.intro-code-file-name,
+.intro-code-actions {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+}
+
+.intro-code-file-name {
+  gap: .55rem;
+}
+
+.intro-code-actions {
+  flex: 0 0 auto;
+  gap: .35rem;
+}
+
+.intro-code-file-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  color: #ededed;
+}
+
+.intro-code-action {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: .35rem;
+  background: transparent;
+  color: #a8a8a8;
+  cursor: pointer;
+  transition: color .15s ease, background-color .15s ease;
+}
+
+.intro-code-action:hover,
+.intro-code-action:focus-visible {
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+}
+
+.intro-code-action:focus-visible {
+  outline: 2px solid #aaa;
+  outline-offset: 2px;
+}
+
+.intro-code-action svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.intro-code-snippet {
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+  scrollbar-color: #888 #242424;
+  scrollbar-width: thin;
+}
+
+.intro-code-snippet pre {
+  width: max-content;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: .45rem .75rem .75rem;
+  background: #242424 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(.62rem, .82vw, .78rem);
+  line-height: 1.55;
+}
+
+@media (max-width: 767px) {
+  .intro-code-file {
+    min-height: 2.75rem;
+    padding-inline: .8rem;
+  }
+
+  .intro-code-snippet pre {
+    padding-inline: .5rem;
+    font-size: .66rem;
+    line-height: 1.45;
+  }
+}

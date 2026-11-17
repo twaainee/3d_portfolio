@@ -124,14 +124,19 @@ body {
 }
 
 .grid-default-color {
-  @apply p-6 bg-gradient-to-br from-[#1b0b3a] via-[#110729] to-[#090317] border border-fuchsia-500/30 shadow-xl hover:border-fuchsia-400/60 hover:shadow-[0_0_30px_rgba(202,47,140,0.35)] rounded-2xl transition-all duration-300 relative overflow-hidden;
+  @apply p-6 bg-[#101014] border border-white/10 shadow-xl hover:border-white/20 rounded-2xl transition-all duration-300 relative overflow-hidden;
 }
 
 .grid-special-color {
-  @apply p-6 bg-gradient-to-br from-[#1b0b3a] via-[#110729] to-[#090317] border border-fuchsia-500/30 shadow-xl hover:border-fuchsia-400/60 hover:shadow-[0_0_30px_rgba(202,47,140,0.35)] rounded-2xl transition-all duration-300 relative overflow-hidden;
+  @apply p-6 bg-[#101014] border border-white/10 shadow-xl hover:border-white/20 rounded-2xl transition-all duration-300 relative overflow-hidden;
 }
+
+.grid-muted-color {
+  @apply p-6 bg-[#242424] border border-white/10 shadow-xl hover:border-white/20 rounded-2xl transition-all duration-300 relative overflow-hidden;
+}
+
 .grid-black-color {
-  @apply p-6 bg-gradient-to-br from-[#1b0b3a] via-[#110729] to-[#090317] border border-fuchsia-500/30 shadow-xl hover:border-fuchsia-400/60 hover:shadow-[0_0_30px_rgba(202,47,140,0.35)] rounded-2xl transition-all duration-300 relative overflow-hidden;
+  @apply p-6 bg-[#101014] border border-white/10 shadow-xl hover:border-white/20 rounded-2xl transition-all duration-300 relative overflow-hidden;
 }
 
 /* Contact Section*/
