@@ -1,4 +1,5 @@
 import FlexCarousel from '../components/FlexCarousel'
+import TechText from '../components/TechText'
 import './GraphicWorks.css'
 
 const graphicWorks = [
@@ -12,12 +13,26 @@ const graphicWorks = [
 
 const GraphicWorks = () => (
   <section id="graphics" className="portfolio-graphic-section section-spacing overflow-hidden">
-    <h2 className="text-heading portfolio-graphic-title">Graphic Design</h2>
+    <h2 className="portfolio-graphic-title" aria-label="Graphic Design">
+      <span className="sr-only">Graphic Design</span>
+      <TechText
+        text="Graphic Design"
+        className="portfolio-graphic-techtext"
+        fontSize={200}
+        fontWeight={700}
+        letterSpacing={-0.045}
+        color="#f5f3ff"
+        accentColor="#ca2f8c"
+        reach={160}
+        draggable={false}
+      />
+    </h2>
     <FlexCarousel
       items={graphicWorks}
       className="portfolio-graphic-carousel"
       cardHeight={0.68}
       gap={16}
+      intro="none"
     />
   </section>
 )

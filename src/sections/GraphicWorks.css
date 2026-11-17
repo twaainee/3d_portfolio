@@ -11,12 +11,21 @@
   text-align: center;
 }
 
+.portfolio-graphic-techtext {
+  height: clamp(120px, 16vw, 210px);
+  color: #f5f3ff;
+}
+
 .portfolio-graphic-carousel {
   height: clamp(560px, 80vh, 900px);
   margin-top: 0.5rem;
 }
 
 @media (max-width: 640px) {
+  .portfolio-graphic-techtext {
+    height: clamp(100px, 27vw, 130px);
+  }
+
   .portfolio-graphic-carousel {
     height: clamp(450px, 70svh, 620px);
     margin-top: 0.25rem;
