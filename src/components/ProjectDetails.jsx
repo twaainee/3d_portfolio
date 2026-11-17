@@ -17,13 +17,13 @@ const ProjectDetails = ({title, description, subDescription, image, tags, href, 
                 {subDescription.map((subDesc) => (
                     <p className='mb-3 font-normal text-neutral-400'>{subDesc}</p>
                 ))}
-                <div className='flex items=center justify-between mt-4'>
-                    <div className='flex gap-3'>
+                <div className='mt-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between'>
+                    <div className='flex flex-wrap gap-3'>
                         {tags.map((tag)=>(
                             <img key={tag.id} src={tag.path} alt={tag.name} className='rounded-lg size-10 hover-animation'/>
                         ))}
                     </div>
-                    <a href={href} className='inline-flex items-center gap-1 font-medium hover-animation cursor-pointer'>
+                    <a href={href} className='inline-flex shrink-0 items-center gap-2 self-end font-medium hover-animation cursor-pointer sm:self-auto'>
                         View Project
                         <img src="assets/arrow-up.svg" className='size-4' />
                     </a>
