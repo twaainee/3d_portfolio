@@ -1,6 +1,5 @@
 import React from 'react'
 import { mySocials } from '../constants'
-import { a } from 'motion/react-client'
 
 const Footer = () => {
   return (

@@ -2,7 +2,6 @@ import { myProjects} from '../constants'
 import Project from '../components/Project'
 import {motion, useMotionValue, useSpring} from 'motion/react'
 import { useState } from 'react'
-import { useMotion } from '@react-three/drei'
 
 const Projects = () => {
   const x = useMotionValue(0)

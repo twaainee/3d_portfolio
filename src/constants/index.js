@@ -13,13 +13,13 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: "HTML",
-        path: "/assets/logos/html5.svg",
+        name: "ReactJS",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 2,
-        name: "CSS",
-        path: "/assets/logos/css3.svg",
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
       },
       {
         id: 3,
@@ -35,8 +35,8 @@ export const myProjects = [
 
       {
         id: 5,
-        name: "Firebase",
-        path: "/assets/logos/firebase.svg",
+        name: "Supabase",
+        path: "/assets/logos/supabase.svg",
       },
     ],
   },

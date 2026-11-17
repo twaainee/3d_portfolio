@@ -23,7 +23,8 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // ESLint's core rule does not recognize JSX references to imported components.
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]|^(motion|AnimatePresence)$' }],
     },
   },
 ])
