@@ -10,7 +10,7 @@
   overflow: hidden;
   cursor: grab;
   user-select: none;
-  touch-action: none;
+  touch-action: pan-y;
   outline: none;
 }
 
@@ -34,6 +34,8 @@
   font-weight: 200;
   transform-origin: left center;
   cursor: pointer;
+  padding-block: 0.35rem;
+  touch-action: none;
   will-change: transform, opacity, filter;
   color: color-mix(in srgb, var(--ow-active-color) calc(var(--ow-p, 0) * 100%), var(--ow-text-color));
 }

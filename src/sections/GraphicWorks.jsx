@@ -33,6 +33,7 @@ const GraphicWorks = () => (
       cardHeight={0.68}
       gap={16}
       intro="none"
+      captureWheel={false}
     />
   </section>
 )
