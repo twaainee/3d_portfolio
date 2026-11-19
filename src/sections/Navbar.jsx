@@ -20,6 +20,10 @@ function Navigation() {
       </li>
 
       <li className='nav-li'>
+        <a href="#certifications" className='nav-link'>Certifications</a>
+      </li>
+
+      <li className='nav-li'>
         <a href="#contact" className='nav-link'>Contact</a>
       </li>
     </ul>
