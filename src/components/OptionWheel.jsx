@@ -204,7 +204,7 @@ const OptionWheel = ({
   }, [applyTarget]);
 
   const handlePointerDown = useCallback(e => {
-    if (!cfgRef.current.draggable || e.pointerType === 'touch') return;
+    if (!cfgRef.current.draggable || !e.isPrimary) return;
     dragRef.current = { y: e.clientY, start: targetRef.current, id: e.pointerId };
     dragMovedRef.current = false;
     setIsDragging(true);
