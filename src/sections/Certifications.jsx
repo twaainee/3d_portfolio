@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import OptionWheel from '../components/OptionWheel'
+import './Certifications.css'
 
 const certificates = [
   {
@@ -62,6 +63,24 @@ const certificates = [
 
 const certificateOptions = certificates.map(({ label }) => label)
 
+const ResumeDownload = () => (
+  <a
+    href="/assets/certificates/EliTwaine_cv_og.pdf"
+    download="Elijah-Twaine-Marquez-Resume.pdf"
+    aria-label="Download resume"
+    className="group inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border border-white/20 bg-transparent pl-3 pr-1.5 text-[11px] font-medium tracking-wide text-neutral-200 transition-all duration-200 hover:border-white hover:bg-white hover:text-black active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 sm:min-h-12 sm:gap-3 sm:pl-4 sm:text-sm"
+  >
+    <span className="sm:hidden">Resume</span>
+    <span className="hidden sm:inline">Download resume</span>
+    <span className="grid size-8 place-items-center rounded-full bg-white text-black transition-colors duration-200 group-hover:bg-black group-hover:text-white sm:size-9">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="h-4 w-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
+        <path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4" />
+      </svg>
+    </span>
+  </a>
+)
+
 const Certifications = () => {
   const [selectedIndex, setSelectedIndex] = useState(3)
   const [mobileCertificateOpen, setMobileCertificateOpen] = useState(false)
@@ -120,19 +139,7 @@ const Certifications = () => {
   <section id="certifications" aria-label="Certifications" className="relative c-space section-spacing">
     <div className="mb-5 flex items-center justify-between gap-3 lg:hidden sm:mb-7">
       <h2 id="mobile-certifications-heading" className="text-2xl font-semibold tracking-tight text-white sm:text-4xl">Certifications</h2>
-      <a
-        href="/assets/certificates/EliTwaine_cv_og.pdf"
-        download="Elijah-Twaine-Marquez-Resume.pdf"
-        aria-label="Download resume"
-        className="inline-flex min-h-11 shrink-0 items-center gap-2 border border-white/15 bg-[#242424] px-2.5 py-2.5 text-[11px] font-medium text-white transition hover:border-white/35 hover:bg-[#303030] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 sm:px-4 sm:text-sm"
-      >
-        <span className="sm:hidden">Resume</span>
-        <span className="hidden sm:inline">Download resume</span>
-        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="h-4 w-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
-          <path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4" />
-        </svg>
-      </a>
+      <ResumeDownload />
     </div>
 
     <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
@@ -172,22 +179,31 @@ const Certifications = () => {
               <span className="ml-1">/{String(certificates.length).padStart(2, '0')}</span>
             </p>
           </div>
-          <div className="mt-6 h-px w-full bg-white/10" />
+          <div className="mt-6 flex w-full gap-1.5" aria-hidden="true">
+            {certificates.map((certificate, index) => (
+              <span
+                key={certificate.href}
+                className={`h-[2px] flex-1 transition-colors duration-300 ${
+                  index === selectedIndex ? 'bg-white' : index < selectedIndex ? 'bg-white/35' : 'bg-white/10'
+                }`}
+              />
+            ))}
+          </div>
         </header>
 
-        <div className="mt-6 h-52 flex-none border border-white/10 bg-[#242424] p-2 sm:mt-7 sm:h-56 sm:p-3 lg:h-64">
+        <div className="mt-6 h-52 flex-none border border-white/10 bg-[#202022] p-2 sm:mt-7 sm:h-56 sm:p-3 lg:h-64">
           <img
             key={selectedCertificate.preview}
             src={selectedCertificate.preview}
             alt={`${selectedCertificate.title} certificate`}
             decoding="async"
-            className="h-full w-full bg-white object-contain"
+            className="certification-panel-entry h-full w-full bg-white object-contain"
           />
         </div>
 
         <div className="mt-6 min-h-[9rem] flex-none border-l border-neutral-700 py-1 pl-5 sm:mt-7 sm:min-h-[9.5rem] sm:pl-7">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-neutral-500">{selectedCertificate.category}</p>
-          <h3 className="mt-4 min-h-[6rem] max-w-xl line-clamp-3 text-3xl font-medium leading-[1.08] tracking-[-0.03em] text-white sm:min-h-[7.5rem] sm:text-4xl">
+          <h3 key={selectedCertificate.title} className="certification-panel-entry mt-4 min-h-[6rem] max-w-xl line-clamp-3 text-3xl font-medium leading-[1.08] tracking-[-0.03em] text-white sm:min-h-[7.5rem] sm:text-4xl">
             {selectedCertificate.title}
           </h3>
         </div>
@@ -205,17 +221,7 @@ const Certifications = () => {
               <path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" />
             </svg>
           </a>
-          <a
-            href="/assets/certificates/EliTwaine_cv_og.pdf"
-            download="Elijah-Twaine-Marquez-Resume.pdf"
-            className="inline-flex min-h-12 items-center justify-center gap-3 border border-white/15 bg-[#242424] px-4 py-3 text-sm font-medium text-white transition hover:border-white/35 hover:bg-[#303030] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 sm:px-5"
-          >
-            Download resume
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="h-4 w-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
-              <path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4" />
-            </svg>
-          </a>
+          <ResumeDownload />
         </div>
       </article>
     </div>
