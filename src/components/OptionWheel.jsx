@@ -46,7 +46,6 @@ const OptionWheel = ({
   const posRef = useRef(defaultSelected);
   const targetRef = useRef(defaultSelected);
   const rafRef = useRef(null);
-  const runFrameRef = useRef(null);
   const lastRef = useRef(0);
   const cfgRef = useRef({});
   const onChangeRef = useRef(onChange);
@@ -63,26 +62,24 @@ const OptionWheel = ({
 
   const remPx = typeof window !== 'undefined' ? parseFloat(getComputedStyle(document.documentElement).fontSize) || 16 : 16;
 
-  useEffect(() => {
-    onChangeRef.current = onChange;
-    onItemClickRef.current = onItemClick;
-    cfgRef.current = {
-      count: items.length,
-      items,
-      rowH: Math.max(fontSize * spacing * remPx, 1),
-      curve,
-      tilt,
-      blur,
-      fade,
-      minOpacity,
-      side,
-      loop,
-      smoothing,
-      draggable,
-      soundUrl,
-      soundVolume
-    };
-  }, [items, fontSize, spacing, remPx, curve, tilt, blur, fade, minOpacity, side, loop, smoothing, draggable, soundUrl, soundVolume, onChange, onItemClick]);
+  onChangeRef.current = onChange;
+  onItemClickRef.current = onItemClick;
+  cfgRef.current = {
+    count: items.length,
+    items,
+    rowH: Math.max(fontSize * spacing * remPx, 1),
+    curve,
+    tilt,
+    blur,
+    fade,
+    minOpacity,
+    side,
+    loop,
+    smoothing,
+    draggable,
+    soundUrl,
+    soundVolume
+  };
 
   // Single rAF loop that eases the wheel position toward its target with
   // frame-rate independent exponential smoothing, then lays every option out
@@ -132,15 +129,8 @@ const OptionWheel = ({
       el.style.setProperty('--ow-p', Math.max(0, 1 - Math.min(dist, 1)).toFixed(4));
     }
 
-    rafRef.current = settled ? null : requestAnimationFrame(runFrameRef.current);
+    rafRef.current = settled ? null : requestAnimationFrame(runFrame);
   }, []);
-
-  useEffect(() => {
-    runFrameRef.current = runFrame;
-    return () => {
-      runFrameRef.current = null;
-    };
-  }, [runFrame]);
 
   const startLoop = useCallback(() => {
     if (rafRef.current != null) {

@@ -19,7 +19,7 @@ const Projects = () => {
       <h2 className='text-heading'>My Selected Projects</h2>
       <div className='bg-gradient-to-r-from-transparent via-neutral-700 to-transparent m-12 h-[1px] w-full'/>
       {myProjects.map((project) => (<Project key={project.id} {...project} setPreview={setPreview} />))}
-      {preview && (<motion.img aria-hidden="true" alt="" className='fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80' style={{x: springX, y:springY}} src={preview}/>)}
+      {preview && (<motion.img className='fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80' style={{x: springX, y:springY}} src={preview}/>)}
     </section>
   )
 }
