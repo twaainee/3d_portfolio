@@ -128,7 +128,7 @@ export const myProjects = [
     subDescription: [
       "SushEli features a modern, minimalist design that highlights the freshness and quality of the sushi. The interface is intuitive and easy to navigate, allowing customers to browse the menu, customize their orders, and view real-time availability.",
     ],
-    href: "",
+    href: "https://github.com/twaainee/SuhshEli",
     logo: "",
     image: "/assets/projects/sushi.jpg",
     tags: [
