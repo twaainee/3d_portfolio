@@ -78,14 +78,15 @@ export const myProjects = [
   },
   {
     id: 3,
-    title: "Cookly",
+    title: "Landr",
     description:
-      "Cookly is a community-driven, full-stack recipe sharing platform that allows users to discover, create, and share their favorite recipes. Built with HTML, CSS, and JavaScript on the frontend, and powered by Firebase on the backend, Cookly delivers a seamless, real-time experience where food enthusiasts can connect over their culinary creations. Whether you're a home cook looking for inspiration or a chef wanting to share your signature dish, Cookly provides the tools to build a vibrant recipe community.",
+      "A Smart Contract-Based Digital Land Registry System Using Avalanche Blockchain and Interactive Mapping for Transparent Land Record Management and Ownership Verification.",
     subDescription: [
+      "Landr is a blockchain-based digital land registry system that leverages the Avalanche blockchain to provide a secure and transparent platform for managing land records. The system utilizes smart contracts to automate the registration and transfer of land ownership, ensuring that all transactions are recorded immutably on the blockchain. Additionally, Landr features an interactive mapping interface that allows users to visualize land parcels, view ownership history, and verify property details in real time.",
     ],
-    href: "",
+    href: "https://github.com/xyryleee/LANDR",
     logo: "",
-    image: "/assets/projects/cookly.jpg",
+    image: "/assets/projects/landr.png",
     tags: [
       {
         id: 1,
@@ -104,22 +105,32 @@ export const myProjects = [
       },
       {
         id: 4,
-        name: "Firebase",
-        path: "/assets/logos/firebase.svg",
+        name: "Leaflet.js",
+        path: "/assets/logos/Leaflet_logo.svg",
+      },
+      {
+        id: 5,
+        name: "Blockchain",
+        path: "/assets/logos/blockchain.svg",
+      },
+      {
+        id: 6,
+        name: "Avalanche",
+        path: "/assets/logos/avalanche.svg",
       },
     ],
   },
   {
     id: 4,
-    title: "Gemini Clone",
+    title: "SushEli",
     description:
-      "GeminiClone is a meticulously crafted frontend recreation of Google's Gemini AI chat experience. Built with HTML, CSS, and JavaScript, and supercharged by Vite for a modern development workflow, this project replicates the clean, conversational interface of Gemini while optionally integrating with a real AI backend (such as the Gemini API or any LLM). Whether you're a developer looking to study UI patterns or want your own private AI chat tool, GeminiClone provides a polished, responsive foundation.",
+      "A UI design for a sushi based restaurant that is designed to be visually appealing and user-friendly, with a focus on showcasing the restaurant's menu items and creating an immersive dining experience.",
     subDescription: [
-      
+      "SushEli features a modern, minimalist design that highlights the freshness and quality of the sushi. The interface is intuitive and easy to navigate, allowing customers to browse the menu, customize their orders, and view real-time availability.",
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/gemini-clone.jpg",
+    image: "/assets/projects/sushi.jpg",
     tags: [
       {
         id: 1,
@@ -135,6 +146,11 @@ export const myProjects = [
         id: 3,
         name: "JavaScript",
         path: "/assets/logos/javascript.svg",
+      },
+      {
+        id: 4,
+        name: "Vite",
+        path: "/assets/logos/vitejs.svg",
       },
     ],
   },
