@@ -31,7 +31,7 @@ const Project = ({title, description, subDescription, href, caseStudy, image, ta
                     type="button"
                     onClick={() => setIsCaseStudyOpen((open) => !open)}
                     aria-expanded={isCaseStudyOpen}
-                    aria-controls={`${caseStudy}-case-study`}
+                    aria-controls={isCaseStudyOpen ? `${caseStudy}-case-study` : undefined}
                     className="inline-flex items-center gap-2 text-neutral-400 transition-colors hover:text-white"
                 >
                     {isCaseStudyOpen ? 'Hide Case Study' : 'Case Study'}
@@ -45,7 +45,7 @@ const Project = ({title, description, subDescription, href, caseStudy, image, ta
                     </svg>
                 </button>
             )}
-            <button onClick={()=>{ setPreview(null); setIsHidden(true) }} className={`inline-flex items-center gap-1 cursor-pointer hover-animation ${CaseStudySection ? '' : 'ml-auto'}`}>
+            <button type="button" onClick={()=>{ setPreview(null); setIsHidden(true) }} className={`inline-flex items-center gap-1 cursor-pointer hover-animation ${CaseStudySection ? '' : 'ml-auto'}`}>
                 Read More
                 <img src="assets/arrow-right.svg" alt="" className="w-5" />
             </button>
