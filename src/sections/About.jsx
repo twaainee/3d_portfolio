@@ -48,10 +48,10 @@ const About = () => {
                 <IntroCodeBlock />
             </div>
             {/* Grid 5 */}
-            <div className="grid-default-color grid-5 group">
+            <div className="grid-5 group rounded-2xl border border-white/10 bg-[#242424] p-6 text-neutral-100 shadow-xl transition-colors duration-300 hover:border-white/20">
                 <div className="z-10 w-[50%]">
-                    <p className="headtext">Tech Stack</p>
-                    <p className="subtext">I specialize in a variety of languages, frameworks and design tools that allow me to build modern, responsive and accessible web applications.</p>
+                    <p className="text-2xl font-semibold text-neutral-100">Tech Stack</p>
+                    <p className="mt-2 text-sm text-neutral-300 sm:text-base md:text-lg">I specialize in a variety of languages, frameworks and design tools that allow me to build modern, responsive and accessible web applications.</p>
                 </div>
                 <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
                     <Frameworks />
