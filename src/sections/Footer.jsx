@@ -10,6 +10,8 @@ const Footer = () => {
           <a
             href={social.href}
             key={social.name}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={`Visit ${social.name}`}
             className="pointer-events-auto relative z-10 inline-flex size-11 cursor-pointer items-center justify-center rounded-full border border-white/10 text-neutral-400 transition hover:border-white/30 hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           >
