@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useCallback, useEffect } from 'react';
-import './OptionWheel.css';
+import '../styles/ComponentCSS/OptionWheel.css';
 
 const DEFAULT_ITEMS = [
   'Ambient',

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Renderer, Program, Mesh, Triangle, Plane, Texture, RenderTarget } from 'ogl';
 
-import './FlexCarousel.css';
+import '../styles/ComponentCSS/FlexCarousel.css';
 
 const photo = id => `https://images.unsplash.com/${id}?w=1200&q=80&auto=format&fit=max`;
 

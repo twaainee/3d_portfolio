@@ -59,8 +59,16 @@ src/
   components/               Reusable interface and visual components
   constants/index.js         Project, social, and experience content
   sections/                 Portfolio sections and project case studies
+  styles/                   Global styles and component stylesheets
+    global.css              Tailwind setup, theme, and shared styles
+    ComponentCSS/            Styles for individual components and sections
+      Certifications.css
+      FlexCarousel.css
+      GraphicWorks.css
+      IntroCodeBlock.css
+      OptionWheel.css
+      TechText.css
   App.jsx                    Page composition
-  index.css                  Global styles and theme
 ```
 
 ## Updating portfolio content

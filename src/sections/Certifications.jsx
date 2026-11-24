@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import OptionWheel from '../components/OptionWheel'
-import './Certifications.css'
+import '../styles/ComponentCSS/Certifications.css'
 
 const certificates = [
   {

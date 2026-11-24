@@ -1,5 +1,5 @@
 import { CodeBlock } from '@animate-ui/react/primitives/code-block'
-import './IntroCodeBlock.css'
+import '../styles/ComponentCSS/IntroCodeBlock.css'
 
 const chatRoute = `import React from "react"
 

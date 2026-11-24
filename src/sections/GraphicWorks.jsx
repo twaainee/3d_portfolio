@@ -1,6 +1,6 @@
 import FlexCarousel from '../components/FlexCarousel'
 import TechText from '../components/TechText'
-import './GraphicWorks.css'
+import '../styles/ComponentCSS/GraphicWorks.css'
 
 const graphicWorks = [
   { src: '/assets/graphics/VOUGE-1.png', title: 'Vogue Editorial', alt: 'Vogue editorial graphic design' },
